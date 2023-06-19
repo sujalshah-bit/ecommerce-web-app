@@ -29,6 +29,7 @@ export default function Page(params) {
         const response = await signUpMutation({ variables: values });
 
         // Handle the response from the server
+       
         if (!error) {
           console.log("Sign up successful!");
           router.push('/login')

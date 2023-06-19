@@ -10,7 +10,10 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://ecommerce-web-app-j9h3.vercel.app', // Replace with your frontend domain
+  credentials: true, // Allow credentials (cookies, authorization headers, etc.) to be sent
+}));
 app.use(cookieParser());
 
 // Connect to the database
