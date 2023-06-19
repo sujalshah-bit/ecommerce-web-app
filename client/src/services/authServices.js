@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const authServices = createApi({
   reducerPath: "authServices",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/", credentials:'include' }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://ecommerce-web-app-api-2s9v.vercel.app/", credentials:'include' }),
   endpoints: (builder) => ({
     authSignUp: builder.mutation({
         query: (credentials) => ({
