@@ -64,13 +64,18 @@ export default function Page() {
               </div>
             );
           })}
-          {cart.length < 1 ? (
-            <>
-              <h1 className="text-center text-3xl  sm:my-11 tracking-wider font-semibold">
+          {cart?.length < 1 ? (
+            <div className="mt-10 sm:mt-0 px-3">
+              <h1 className=" text-2xl   tracking-wider font-semibold">
                 Nothing To Show
               </h1>
-              <p className="text-xl mt-5 text-gray-600">add Some items to the cart. <Link className="text-rose-500">Browse here</Link></p>
-            </>
+              <p className="text-lg mt-2 text-gray-600">
+                add Some items to the cart.{" "}
+                <Link href={"/allproducts"} className="text-rose-500">
+                  Browse here
+                </Link>
+              </p>
+            </div>
           ) : (
             <></>
           )}
