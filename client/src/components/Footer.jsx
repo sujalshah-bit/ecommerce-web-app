@@ -47,7 +47,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-blue-400 hover:text-white">
-                  <BsTwitter/>
+                  <BsTwitter fill='blue'/>Twitter
                 </a>
               </li>
               <li>
