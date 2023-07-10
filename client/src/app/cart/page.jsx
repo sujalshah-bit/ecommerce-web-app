@@ -4,16 +4,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { RxCross1 } from "react-icons/rx";
 import { removeFromCart } from "@/store/slice";
 import { useState, useEffect } from "react";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 export default function Page() {
   const cart = useSelector((state) => state.cart.value);
-  const dispatch = useDispatch()
-  const [price, setPrice] = useState(0)
- 
+  const dispatch = useDispatch();
+  const [price, setPrice] = useState(0);
 
-useEffect(() => {
+  useEffect(() => {
     let totalPrice = 0;
 
     cart?.forEach((element) => {
@@ -22,12 +22,12 @@ useEffect(() => {
 
     setPrice(totalPrice);
   }, [cart]);
-const handleSubmit = (elem) =>{
-  dispatch(removeFromCart(elem))
-  toast.dark('Item Remove From Cart',{
-    position: toast.POSITION.BOTTOM_RIGHT
-  })
-}  
+  const handleSubmit = (elem) => {
+    dispatch(removeFromCart(elem));
+    toast.dark("Item Remove From Cart", {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    });
+  };
   return (
     <div className="text-white bg-[#191919] min-h-screen">
       <Nav />
@@ -38,7 +38,10 @@ const handleSubmit = (elem) =>{
           </h1>
           {cart?.map((elem, idx) => {
             return (
-              <div key={idx} className="flex py-5 border-y-[1px] border-white px-3 gap-2">
+              <div
+                key={idx}
+                className="flex py-5 border-y-[1px] border-white px-3 gap-2"
+              >
                 <img
                   src={elem?.thumbnail}
                   alt=""
@@ -54,13 +57,23 @@ const handleSubmit = (elem) =>{
                       <h1>$ {elem.price}</h1>
                     </div>
                     <div>
-                      <RxCross1 onClick={(elem)=>handleSubmit(elem)} />
+                      <RxCross1 onClick={(elem) => handleSubmit(elem)} />
                     </div>
                   </div>
                 </div>
               </div>
             );
           })}
+          {cart.length < 1 ? (
+            <>
+              <h1 className="text-center text-3xl  sm:my-11 tracking-wider font-semibold">
+                Nothing To Show
+              </h1>
+              <p className="text-xl mt-5 text-gray-600">add Some items to the cart. <Link className="text-rose-500">Browse here</Link></p>
+            </>
+          ) : (
+            <></>
+          )}
         </div>
 
         <div className="bg-black px-4 py-3 text-sm  border-[1px] border-slate-950 text-white w-[300px] m-auto sm:w-[40%] 2xl:w-[390px] h-[230px]">
@@ -80,7 +93,7 @@ const handleSubmit = (elem) =>{
           </button>
         </div>
       </section>
-      <Footer className='mt-5'/>
+      <Footer className="mt-5" />
     </div>
   );
 }
