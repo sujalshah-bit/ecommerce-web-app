@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useAuthLogOutQuery } from "@/services/authServices";
 import { checkSignIn } from "@/store/loginSlice";
 import Link from "next/link";
@@ -87,9 +87,24 @@ const Nav = () => {
             <Link href={"/allproducts"}>
               <li className="text-lg">Products</li>
             </Link>
-            <Link href={"/contact"}>
+            <Link href={"/contactus"}>
               <li className="text-lg">Contact Us</li>
             </Link>
+            {isSignedIn ? (
+              <>
+                <Link href={"/signup"}>
+                  <button>Sign Up</button>
+                </Link>
+                <Link href={"/login"}>
+                  <button>Log In</button>
+                </Link>
+              </>
+            ) : (
+              <>
+                <p>{user}</p>
+                <button onClick={handleLogOut}>Log Out</button>
+              </>
+            )}
           </ul>
         </section>
       )}
@@ -136,12 +151,10 @@ export default Nav;
 //           </Link>
 //         </ul>
 
-        
-
 //         {IsSignin ? (
 //           <div className="flex items-center gap-3">
-//            <Link href={'/signup'}><button>Sign Up</button></Link> 
-//            <Link href={'/login'}><button>Log In</button></Link> 
+//            <Link href={'/signup'}><button>Sign Up</button></Link>
+//            <Link href={'/login'}><button>Log In</button></Link>
 //           </div>
 //         ) : (
 //           <div className="flex items-center gap-3">

@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import { useSearchProductQuery, useGetAllProductsQuery } from "@/services/apiServices";
 import Link from "next/link";
@@ -114,6 +115,7 @@ export default function Page() {
           ) : (<>No data avaiable</>)}
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }

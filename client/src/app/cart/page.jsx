@@ -6,6 +6,7 @@ import { removeFromCart } from "@/store/slice";
 import { useState, useEffect } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import Footer from "@/components/Footer";
 export default function Page() {
   const cart = useSelector((state) => state.cart.value);
   const dispatch = useDispatch()
@@ -79,6 +80,7 @@ const handleSubmit = (elem) =>{
           </button>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }
