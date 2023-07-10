@@ -13,13 +13,13 @@ const Footer = () => {
             <h3 className="text-lg font-bold">Categories</h3>
             <ul className="mt-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">Category 1</a>
+                <a href="#" className="text-gray-300 hover:text-white">Home Decoration </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">Category 2</a>
+                <a href="#" className="text-gray-300 hover:text-white">Beatury Products</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">Category 3</a>
+                <a href="#" className="text-gray-300 hover:text-white">Clothing</a>
               </li>
             </ul>
           </div>
