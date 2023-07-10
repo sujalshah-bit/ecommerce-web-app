@@ -93,16 +93,16 @@ const Nav = () => {
             {isSignedIn ? (
               <>
                 <Link href={"/signup"}>
-                  <button>Sign Up</button>
+                  <button className="text-lg">Sign Up</button>
                 </Link>
                 <Link href={"/login"}>
-                  <button>Log In</button>
+                  <button className="text-lg">Log In</button>
                 </Link>
               </>
             ) : (
               <>
                 <p>{user}</p>
-                <button onClick={handleLogOut}>Log Out</button>
+                <button onClick={handleLogOut} className="text-lg">Log Out</button>
               </>
             )}
           </ul>
