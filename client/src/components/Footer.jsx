@@ -47,11 +47,11 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-blue-400 hover:text-white">
-                  <BsTwitter fill='blue'/>Twitter
+                  <BsTwitter />
                 </a>
               </li>
               <li>
-                <a href="#" className=" hover:text-white">
+                <a href="#" className="text-black hover:text-white">
                  <BsInstagram/>
                 </a>
               </li>
