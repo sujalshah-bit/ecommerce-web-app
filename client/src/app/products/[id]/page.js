@@ -134,7 +134,7 @@ export default  function Product() {
             </button>
           </div>
         </div>
-        <Footer/>
+        <Footer  className='mt-5'/>
       </section>
     </>
   );

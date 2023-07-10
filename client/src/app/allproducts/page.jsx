@@ -115,7 +115,7 @@ export default function Page() {
           ) : (<>No data avaiable</>)}
         </div>
       </section>
-      <Footer/>
+      <Footer className='mt-5'/>
     </div>
   );
 }

@@ -31,7 +31,7 @@ const handleSubmit = (elem) =>{
   return (
     <div className="text-white bg-[#191919] min-h-screen">
       <Nav />
-      <section className="w-full sm:w-[600px] md:w-[700px] lg:w-[900px] xl:w-[1200px] m-auto  flex flex-col sm:flex-row  sm:gap-2  items-center justify-between gap-10 ">
+      <section className="w-full sm:w-[600px] md:w-[700px] lg:w-[900px] xl:w-[1200px] m-auto min-h-screen flex flex-col sm:flex-row  sm:gap-2  items-center justify-between gap-10 ">
         <div className="w-full sm:w-[60%] 2xl:w-[70%]">
           <h1 className="text-center text-3xl  sm:my-11 tracking-wider font-semibold">
             Shopping Cart
@@ -80,7 +80,7 @@ const handleSubmit = (elem) =>{
           </button>
         </div>
       </section>
-      <Footer/>
+      <Footer className='mt-5'/>
     </div>
   );
 }
