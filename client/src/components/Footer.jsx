@@ -51,7 +51,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-black hover:text-white">
+                <a href="#" className="text-pink-600 hover:text-white">
                  <BsInstagram/>
                 </a>
               </li>

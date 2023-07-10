@@ -101,7 +101,7 @@ const Nav = () => {
               </>
             ) : (
               <>
-                <p>{user}</p>
+                <p className="text-lg">{user}</p>
                 <button onClick={handleLogOut} className="text-lg">Log Out</button>
               </>
             )}
