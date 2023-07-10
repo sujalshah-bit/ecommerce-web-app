@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { BsTwitter,BsFacebook,BsInstagram } from 'react-icons/bs'
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-8">
@@ -41,18 +41,18 @@ const Footer = () => {
             <h3 className="text-lg font-bold">Follow Us</h3>
             <ul className="flex mt-2 space-x-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">
-                  <i className="fab fa-facebook-square text-2xl"></i>
+                <a href="#" className="text-indigo-600 hover:text-white">
+                  <BsFacebook/>
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">
-                  <i className="fab fa-twitter-square text-2xl"></i>
+                <a href="#" className="text-blue-400 hover:text-white">
+                  <BsTwitter/>
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">
-                  <i className="fab fa-instagram-square text-2xl"></i>
+                <a href="#" className=" hover:text-white">
+                 <BsInstagram/>
                 </a>
               </li>
             </ul>
